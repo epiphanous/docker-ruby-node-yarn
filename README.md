@@ -3,7 +3,18 @@
 This repo is forked from the [Stareffosen ruby/node docker repo](https://github.com/Starefossen/docker-ruby-node).
 This repo just dries up the files and allows automating/customizing the versions a bit.
 
-## Usage
+## Getting the Images
+
+The images described here are published to [Docker Hub](https://hub.docker/com/nextdude/ruby-node-yarn). You can
+pull them in the normal way:
+
+```
+docker pull nextdude/ruby-node-yarn:latest
+```
+
+See docker hub for the currently published tags.
+
+## Building Your Own Images
 
 After cloning the repo, edit 'gen-docker-compose.sh' and confirm the versions of ruby, node and yarn
 are the ones you want to build. The defaults as of the writing of this README are:
