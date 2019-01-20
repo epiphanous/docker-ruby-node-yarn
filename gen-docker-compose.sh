@@ -74,4 +74,4 @@ latest=1
   done
 } > docker-compose.yml
 
-[ "$1" = "--gen-keys" ] && gen_keys
+[ "$1" = "--gen-keys" -o ! -d .gnupg ] && gen_keys
