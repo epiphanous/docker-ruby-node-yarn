@@ -1,11 +1,120 @@
 version: '3'
 
 services:
-  ruby-node:
+  rny-latest:
     build:
       context: .
       args:
-        - RUBY_BASE
-        - NODE_MAJOR
-        - KEYS
-    image: nextdude/ruby-node:${TAG_VERSION}
+        RUBY_BASE: ruby:2.6
+        NODE_MAJOR: 11
+        YARN_VERSION: 1.13.0
+    image: nextdude/ruby-node-yarn:latest
+
+  rny-2_6-11-1_13_0:
+    build:
+      context: .
+      args:
+        RUBY_BASE: ruby:2.6
+        NODE_MAJOR: 11
+        YARN_VERSION: 1.13.0
+    image: nextdude/ruby-node-yarn:2_6-11-1_13_0
+
+  rny-2_6-10-1_13_0:
+    build:
+      context: .
+      args:
+        RUBY_BASE: ruby:2.6
+        NODE_MAJOR: 10
+        YARN_VERSION: 1.13.0
+    image: nextdude/ruby-node-yarn:2_6-10-1_13_0
+
+  rny-2_6-8-1_13_0:
+    build:
+      context: .
+      args:
+        RUBY_BASE: ruby:2.6
+        NODE_MAJOR: 8
+        YARN_VERSION: 1.13.0
+    image: nextdude/ruby-node-yarn:2_6-8-1_13_0
+
+  rny-2_6-6-1_13_0:
+    build:
+      context: .
+      args:
+        RUBY_BASE: ruby:2.6
+        NODE_MAJOR: 6
+        YARN_VERSION: 1.13.0
+    image: nextdude/ruby-node-yarn:2_6-6-1_13_0
+
+  rny-2_5-11-1_13_0:
+    build:
+      context: .
+      args:
+        RUBY_BASE: ruby:2.5
+        NODE_MAJOR: 11
+        YARN_VERSION: 1.13.0
+    image: nextdude/ruby-node-yarn:2_5-11-1_13_0
+
+  rny-2_5-10-1_13_0:
+    build:
+      context: .
+      args:
+        RUBY_BASE: ruby:2.5
+        NODE_MAJOR: 10
+        YARN_VERSION: 1.13.0
+    image: nextdude/ruby-node-yarn:2_5-10-1_13_0
+
+  rny-2_5-8-1_13_0:
+    build:
+      context: .
+      args:
+        RUBY_BASE: ruby:2.5
+        NODE_MAJOR: 8
+        YARN_VERSION: 1.13.0
+    image: nextdude/ruby-node-yarn:2_5-8-1_13_0
+
+  rny-2_5-6-1_13_0:
+    build:
+      context: .
+      args:
+        RUBY_BASE: ruby:2.5
+        NODE_MAJOR: 6
+        YARN_VERSION: 1.13.0
+    image: nextdude/ruby-node-yarn:2_5-6-1_13_0
+
+  rny-2_4-11-1_13_0:
+    build:
+      context: .
+      args:
+        RUBY_BASE: ruby:2.4
+        NODE_MAJOR: 11
+        YARN_VERSION: 1.13.0
+    image: nextdude/ruby-node-yarn:2_4-11-1_13_0
+
+  rny-2_4-10-1_13_0:
+    build:
+      context: .
+      args:
+        RUBY_BASE: ruby:2.4
+        NODE_MAJOR: 10
+        YARN_VERSION: 1.13.0
+    image: nextdude/ruby-node-yarn:2_4-10-1_13_0
+
+  rny-2_4-8-1_13_0:
+    build:
+      context: .
+      args:
+        RUBY_BASE: ruby:2.4
+        NODE_MAJOR: 8
+        YARN_VERSION: 1.13.0
+    image: nextdude/ruby-node-yarn:2_4-8-1_13_0
+
+  rny-2_4-6-1_13_0:
+    build:
+      context: .
+      args:
+        RUBY_BASE: ruby:2.4
+        NODE_MAJOR: 6
+        YARN_VERSION: 1.13.0
+    image: nextdude/ruby-node-yarn:2_4-6-1_13_0
+
