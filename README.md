@@ -1,7 +1,46 @@
-> Simplified this to allow you specify environment variables (or just edit the
-> `.env` file) and a single docker file. Just run `docker-compose build` to
-> build or `docker-compose run` to see the versions and a list of binaries
-> installed.
+# Ruby/Node/Yarn Image
+
+This repo is forked from the [Stareffosen ruby/node docker repo](https://github.com/Starefossen/docker-ruby-node).
+This repo just dries up the files and allows automating/customizing the versions a bit.
+
+## Usage
+
+After cloning the repo, edit 'gen-docker-compose.sh' and confirm the versions of ruby, node and yarn
+are the ones you want to build. The defaults as of the writing of this README are:
+
+```
+RUBY_VERSIONS="2.6 2.5 2.4"
+NODE_VERSIONS="11 10 8 6"
+YARN_VERSIONS=$(curl -sSL --compressed https://yarnpkg.com/latest-version)
+```
+
+When you run
+
+```
+./gen-docker-compose.sh --gen-keys
+```
+
+the `docker-compose.yml` file is updated to build images combining all those versions
+(as well as a `latest` image with the most up to date versions).
+
+The `--gen-keys` command downloads all the required `gpg` keys for verifying the `node` and `yarn` packages. These will
+be copied into each image when built. You may find in the future you need to update the list of keys associated with
+`node`. You can find them at https://github.com/nodejs/node#release-team. Update the list near the top of `gen-docker-compose.sh`
+and rerun with `--gen-keys` option.
+
+Finally, build all the images in the normal way:
+
+```
+docker-compose build
+```
+
+Or for a specific image:
+
+```
+docker-compose build latest
+```
+
+# ORIGINAL README
 
 # Ruby + Node Docker Image [![Image Layers](https://images.microbadger.com/badges/image/starefossen/ruby-node:alpine.svg)](https://microbadger.com/#/images/starefossen/ruby-node:alpine)
 
