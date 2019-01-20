@@ -5,7 +5,7 @@ This repo just dries up the files and allows automating/customizing the versions
 
 ## Getting the Images
 
-The images described here are published to [Docker Hub](https://hub.docker/com/nextdude/ruby-node-yarn). You can
+The images described here are published to [Docker Hub](https://cloud.docker.com/u/nextdude/repository/docker/nextdude/ruby-node-yarn). You can
 pull them in the normal way:
 
 ```
