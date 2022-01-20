@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-RUBY_VERSIONS="2.6 2.5 2.4"
-NODE_VERSIONS="11 10 8 6"
+RUBY_VERSIONS="2.7 2.6 2.5 2.4"
+NODE_VERSIONS="16 14 11 10 8 6"
 YARN_VERSIONS=$(curl -sSL --compressed https://yarnpkg.com/latest-version)
 
 # node release keys pulled from https://github.com/nodejs/node#release-team
